@@ -24,7 +24,7 @@ app.use(expressJwt({
 }).unless({ path: ['/users/authenticate', '/users/register'] }));
 
 // routes
-app.use('/users', require('./controllers/users.controller'));
+app.use('/users', require('./users.controller'));
 
 // start server
 var port = process.env.NODE_ENV === 'production' ? 80 : 4000;
